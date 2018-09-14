@@ -13,16 +13,16 @@ class AbstractMelonOrder():
         self.species = species
         self.qty = qty
         self.shipped = False
-        self.hour = datetime.now()
-        self.day = datetime.weekday(self.hour)
+        # self.time = datetime.now()
+        # self.day = datetime.weekday(self.hour)
         
     def get_base_price(self):
         """Generate a Splurge random base price number"""
 
         base_price = random.randint(5, 9)
 
-        if self.hour >= 8 and self.hour <= 11 and self.day in range(0, 5):
-            base_price += 4
+        # if self.hour >= 8 and self.hour <= 11 and self.day in range(0, 5):
+        #     base_price += 4
 
         return base_price
 
